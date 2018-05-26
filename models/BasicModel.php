@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: temka
- * Date: 25.05.18
- * Time: 22:03
- */
+use components\Db;
 
 abstract class BasicModel
 {
@@ -29,11 +24,11 @@ abstract class BasicModel
 
     /**
      * Model constructor.
-     * @param DBOConnectorInterface $db
+
      */
-    public function __construct(DBOConnectorInterface $db)
+    public function __construct()
     {
-        $this->dbo = $db;
+        $this->dbo = new Db(require_once ROOT.'/config/db_params.php');
     }
 
     /**

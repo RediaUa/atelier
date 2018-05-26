@@ -17,12 +17,14 @@ class File extends BasicModel
     public $path;
     public function __construct(array $file)
     {
+        parent::__construct();
         $this->type = $file['type'];
         $this->tmp_name = $file['tmp_name'];
         $this->error = $file['error'];
         $this->path = self::filePath . uniqid() . md5($_SERVER['REQUEST_TIME']);
     }
     private function checkError(){
+        var_dump($this->dbo);
         return !$this->error;
     }
     public function upload(){

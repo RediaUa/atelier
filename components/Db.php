@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: temka
- * Date: 25.05.18
- * Time: 21:44
- */
+namespace components;
 
 class Db
 {
