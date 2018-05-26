@@ -24,7 +24,6 @@ class File extends BasicModel
         $this->path = self::filePath . uniqid() . md5($_SERVER['REQUEST_TIME']);
     }
     private function checkError(){
-        var_dump($this->dbo);
         return !$this->error;
     }
     public function upload(){
