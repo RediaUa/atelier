@@ -9,11 +9,34 @@
 </head>
 <body>
 
-<form action="create_order_service" method="post" enctype="multipart/form-data">
+<?php if (!isset($result) ):?>
+<form action="order_service" method="post" enctype="multipart/form-data">
     <input type="file" name="image">
     <input type="text" name="name">
-    <button type="submit">submit</button>
+    <input type="text" name="surname">
+    <input type="text" name="phone">
+    <input type="text" name="description">
+    <select name="service" id="">
+    <?php foreach ($services as $serv):?>
+        <option value="<?php echo $serv->id?>"><? echo $serv->title?></option>
+    <?php endforeach;?>
+    </select>
+    <button type="submit" name="submit">submit</button>
 </form>
+<?php endif; ?>
 
+<?php if(isset($errors)):?>
+<div style="background-color: yellow">
+    <?foreach ($errors as $error):?>
+<p><?echo $error?></p>
+    <?php endforeach;?>
+</div>
+<?endif;?>
+
+
+<?php if (isset($result)):?>
+    <a href="/">На главную</a>
+<div>Ваш заказ будет обработан в ближайшее время!</div>
+<?php  endif;?>
 </body>
 </html>

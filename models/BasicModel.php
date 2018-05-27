@@ -28,55 +28,10 @@ abstract class BasicModel
      */
     public function __construct()
     {
-        $this->dbo = new Db(require_once ROOT.'/config/db_params.php');
+        $params = require_once ROOT.'/config/db_params.php';
+        $this->dbo = Db::getInstance($params);
     }
 
-    /**
-     * Create new record
-     */
-    public function create( $data ) {
-        //@TODO: Implement this
-    }
 
-    /**
-     * Read record
-     *
-     * @param   int Record ID
-     *
-     * @return  object
-     */
-    public function load( $id ) {
-        $sql = 'SELECT * FROM `' . $this->tableName .
-            '` WHERE `'.$this->primaryKey.'`='.(int)$id; //!
-
-        return $this->dbo->setQuery($sql)->getResult($this);
-    }
-
-    /**
-     * Save record state to db
-     *
-     * @return bool
-     */
-    public function save() {
-        //@TODO: Implement this
-    }
-
-    /**
-     * Delete record from DB
-     */
-    public function delete() {
-        //@TODO: Implement this
-    }
-
-    /**
-     * Get list of records
-     *
-     * @return array
-     */
-    public function getList() {
-        $sql = 'SELECT * FROM `' . $this->tableName . '`';
-
-        return $this->dbo->setQuery($sql)->getList(get_class($this));
-    }
 }
 

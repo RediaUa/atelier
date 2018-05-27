@@ -7,8 +7,7 @@
  */
 
 return array(
-    'create_order_service' => 'site/createOrderService',
-    'services' => 'site/service',
-    'order_service' => 'site/orderService',
+    'services' => 'service/service',
+    'order_service' => 'service/orderService',
     '' => 'site/index',
 );
