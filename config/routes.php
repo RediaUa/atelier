@@ -7,7 +7,10 @@
  */
 
 return array(
-    'services' => 'service/service',
+    'admin/order/([0-9]+)' => 'admin/applyOrder/$1',
+    'admin/services' =>'admin/orderService',
+    'admin' => 'admin/index',
     'order_service' => 'service/orderService',
+    'services' => 'service/service',
     '' => 'site/index',
 );
