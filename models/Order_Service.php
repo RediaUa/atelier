@@ -51,7 +51,7 @@ public function getOrder($id){
     return false;
 }
 public function applyOrder($id, $price, $status){
-        $sql = "UPDATE $this->tableName SET price = $price, status = $status WHERE id = $id;";
+        $sql = "UPDATE $this->tableName SET price =" .$price.", status = $status WHERE id = $id;";
         $result = $this->dbo->query($sql);
         return $result;
 }

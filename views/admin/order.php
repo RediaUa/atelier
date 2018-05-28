@@ -18,22 +18,26 @@
     <img src="<?echo '/'.$order->img?>" alt="#">
     <p>Ціна:<input type="text" name="price" value="<?echo $order->price?>"></p>
     <?if($order->status == 0):?>
-    <p>Подтвердить заказ<input type="checkbox" name="status" value="1"></p>
+    <p>Підтвердити замовлення<input type="checkbox" name="status" value="1"></p>
     <?endif;?>
     <?if($order->status == 1):?>
-        <p>Заказ подтвержден<input type="checkbox" name="status" value="1" checked></
+        <p>Замовлення підтверджено<input type="checkbox" name="status" value="1" checked></
     <?endif;?>
-    <?if (isset($result)):?>
+    <?
+    if(isset($result) && empty($errors)):?>
     <p>Збережено!</p>
     <a href="/admin/services">Повернутися до замовлень</a>
     <? else: ?>
-
+        <br>
     <button type="submit" name="submit">Зберегти</button>
+    <?foreach ($errors as $error):?>
+        <p><?echo $error;?></p>
+    <? endforeach;?>
     <? endif;?>
 
 </form>
 <?else:?>
-<p>Заказ не найден!</p>
+<p>Замовлення не знайдено!</p>
 <?endif;?>
 
 </body>

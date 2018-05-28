@@ -21,12 +21,18 @@ class AdminController
     }
     public function actionApplyOrder($id){
         $order_service = new Order_Service();
-        $status = 0;
+        $status = 0;;
+        $errors = [];
         if(isset($_POST['submit'])){
-            if(isset($_POST['status'])){
+            if($_POST['price'] == '' || null){
+                $errors[] = 'Установите цену!';
+            }
+            else if(isset($_POST['status'])){
                 $status = $_POST['status'];
             }
-            $result = $order_service->applyOrder($id, $_POST['price'], $status);
+            if(empty($errors)){
+                $result = $order_service->applyOrder($id, $_POST['price'], $status);
+            }
         }
         $order = $order_service->getOrder($id);
         require_once ROOT.'/views/admin/order.php';
