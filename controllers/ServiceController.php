@@ -14,6 +14,12 @@ class ServiceController
         $errors = [];
         $serviceObject = new Service();
         $services = $serviceObject->getServices();
+        $name = '';
+        $surname = '';
+        $phone = '';
+        $desc = '';
+        $img = '';
+        $id_service = '';
 
         if(isset($_POST['submit'])){
             $name = $_POST['name'];

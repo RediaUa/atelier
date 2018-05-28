@@ -12,10 +12,10 @@
 <?php if (!isset($result) ):?>
 <form action="order_service" method="post" enctype="multipart/form-data">
     <input type="file" name="image">
-    <input type="text" name="name">
-    <input type="text" name="surname">
-    <input type="text" name="phone">
-    <input type="text" name="description">
+    <input type="text" name="name" value = <? echo $name;?>>
+    <input type="text" name="surname" value = <? echo $surname;?>>
+    <input type="text" name="phone" value = <? echo $phone;?>>
+    <input type="text" name="description" value = <? echo $desc;?>>
     <select name="service" id="">
     <?php foreach ($services as $serv):?>
         <option value="<?php echo $serv->id?>"><? echo $serv->title?></option>
