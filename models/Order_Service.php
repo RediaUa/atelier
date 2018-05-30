@@ -34,8 +34,10 @@ class Order_Service extends BasicModel
         return false;
 
 }
-public  function getOrders(){
-        $sql = "SELECT o.id, o.name, o.surname, o.phone, o.date, s.title, o.status FROM $this->tableName o JOIN Services s ON o.id_service = s.id;";
+public  function getOrders($status){
+
+        if($status == true) { $status = 1; } else { $status = 0;};
+        $sql = "SELECT o.id, o.name, o.surname, o.phone, o.date, s.title, o.status FROM $this->tableName o JOIN Services s ON o.id_service = s.id WHERE status = $status;";
         $result = $this->dbo->query($sql)->fetchAll(PDO::FETCH_CLASS);
     if ($result){
         return $result;

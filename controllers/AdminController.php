@@ -15,10 +15,20 @@ class AdminController
 
     public function actionOrderService(){
         $order_service = new Order_Service();
-        $orders = $order_service->getOrders();
+        $status = false;
+       if(isset($_POST['status'])){
+           if($_POST['status'] == 'false'){
+               $status = false;
+           }
+           else if($_POST['status'] == 'true'){
+               $status = true;
+           }
+       }
+        $orders = $order_service->getOrders($status);
         require_once ROOT.'/views/admin/services.php';
         return true;
     }
+
     public function actionApplyOrder($id){
         $order_service = new Order_Service();
         $status = 0;;

@@ -38,11 +38,11 @@ class ServiceController
                     $result =  $order->save();
                 }
                 else{
-                    $errors[] = 'Файл не загружен! Попробуйте еще раз';
+                    $errors[] = 'Файл не загружений! Спробуйте ще раз';
                 }
             }
             else{
-                $errors[] = 'Заполните все поля';
+                $errors[] = 'Заповніть всі поля';
             }
 
         }
