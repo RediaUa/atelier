@@ -32,7 +32,7 @@ class AdminController
         $errors = [];
         if(isset($_POST['submit'])){
             if($_POST['price'] == '' || null){
-                $errors[] = 'Установите цену!';
+                $errors[] = 'Потрібно встановити ціну!';
             }
             else if(isset($_POST['status'])){
                 $status = $_POST['status'];

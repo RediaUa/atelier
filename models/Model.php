@@ -30,7 +30,8 @@ class Model extends BasicModel
 
     }
     public function delete($id){
-        $sql = "DELETE FROM $this->tableName WHERE id = id";
+        $id = (int)$id;
+        $sql = "DELETE FROM $this->tableName WHERE id = $id";
         $result =  $this->dbo->query($sql);
         if ($result){
             return true;

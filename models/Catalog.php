@@ -22,7 +22,6 @@ class Catalog extends BasicModel
             $sql = $sql . " WHERE c.id = $id_category";
         }
         $sql = $sql . " ORDER BY c.id";
-
         return $this->dbo->query($sql)->fetchAll(PDO::FETCH_CLASS);
     }
 

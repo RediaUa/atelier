@@ -1,0 +1,134 @@
+body {
+    color: #392742;
+    font-size: 14pt;
+    background-color: #f3f0f4;
+}
+.marker-none {
+    list-style-type:  none;
+}
+.background-color-navbar {
+    background-color: #f3f0f4 !important;
+    border-bottom: 2px solid #392742;
+}
+.main-flex-field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+    background-color: #392742;
+    color: #f3f0f4;
+}
+.result-order-field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+    background-color: #f3f0f4;
+    color: #392742;
+}
+.main-flex-field-inverted-color {
+    background-color: #f3f0f4;
+    color:  #392742;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+}
+.item-order {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.input-order {
+    width: 300px;
+    height: 30px;
+    font-size: 13pt;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    outline:none;
+}
+.file-order {
+    border-radius: 15px;
+}
+.textarea-order {
+    width: 300px;
+    height: 200px;
+    font-size: 13pt;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline:none;
+}
+.select-order {
+    width: 300px;
+    height: 30px;
+    font-size: 13pt;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    outline:none;
+    border-color: #392742;
+
+}
+.button-order {
+    margin-top: 70px;
+    color: black;
+    cursor: pointer;
+    font-size: 17pt;
+    width: 215px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+}
+.button-order:hover {
+    background-color: #392742;
+    color: white;
+}
+.errors {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15pt;
+    font-weight: bolder;
+    background-color: #660000;
+    color: white;
+    padding-top: 10px;
+}
+.link-service, .link-service:link, .link-service:visited, .link-service:active, .link-service:hover {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 17pt;
+    width: 215px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+    text-align: center;
+    margin: 10px;
+}
+.link-service:hover {
+    background-color: #392742;
+    color: white;
+}
+.result-title {
+    margin: 10px;
+}
+.errors{
+    display: none;
+}
