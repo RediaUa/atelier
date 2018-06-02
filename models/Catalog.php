@@ -6,6 +6,7 @@ class Catalog extends BasicModel
     public $tableName = 'Model';
 
     public function getModelByIdCategory($id){
+        $id = (int)$id;
         $sql = "SELECT * FROM $this->tableName WHERE id_category = $id";
         return $this->dbo->query($sql)->fetchAll(PDO::FETCH_CLASS);
     }
@@ -17,6 +18,7 @@ class Catalog extends BasicModel
         $sql = "SELECT t.id, t.title, t.img, t.description FROM 
         $this->tableName t JOIN Category c ON t.id_category = c.id";
         if($id_category != null){
+            $id_category = (int)$id_category;
             $sql = $sql . " WHERE c.id = $id_category";
         }
         $sql = $sql . " ORDER BY c.id";

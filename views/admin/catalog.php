@@ -68,7 +68,7 @@
                 <p><?echo $model->id;?></p>
                 <p><?echo $model->title;?></p>
                 <img src="<?echo '/'.$model->img;?>" alt="#">
-                <a   onclick="return confirm('Are you sure?')" class= "deleteItem"
+                <a   onclick="return confirm('Ви впевнені?')" class= "deleteItem"
                      href="/admin/catalog/<?echo $category . '/' . $model->id;?>">Видалити</a>
             <?endforeach;?>
         </div>
