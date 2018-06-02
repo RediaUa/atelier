@@ -165,7 +165,8 @@
 
         <th>Дія</th>
     </tr>
-    <?foreach ($orders as $order):?>
+    <?if(!empty($orders)):
+    foreach ($orders as $order):?>
     <tr>
         <td><?echo $order->id;?> </td>
         <td><?echo $order->name;?> </td>
@@ -176,7 +177,8 @@
         <td><?if($order->status == 0):echo 'Не підтверджений'; else: echo 'Підтвержений' ; endif;?> </td>
         <td class="td-view-click" onclick="location.href='/admin/order/<?echo $order->id;?>';">Проглянути</td>
     </tr>
-    <?endforeach;?>
+    <?endforeach;
+    endif;?>
 </table>
 <div class="main-flex-field">
     <a class="link-service" href="admin">До головного меню</a>
