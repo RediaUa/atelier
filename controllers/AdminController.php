@@ -50,7 +50,12 @@ public function actionCatalog($category = null, $id = null){
             $model = new Model();
             $resultOfDelete = $model->delete($id);
             if($resultOfDelete){
-                header("Location: /admin/catalog/$category");
+                if($category != 0){
+                    header("Location: /admin/catalog/$category");
+                }
+                else{
+                    header("Location: /admin/catalog");
+                }
             }
             else{
                 echo "Помилка видалення!";

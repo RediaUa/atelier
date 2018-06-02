@@ -23,9 +23,6 @@
                         <a class="dropdown-item" href="/catalog/4">Індивідуальні моделі</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin">Админка</a>
-                </li>
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
