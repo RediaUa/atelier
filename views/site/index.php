@@ -74,16 +74,15 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Каталог
-                    </a>
+                    </span>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Весна</a>
-                        <a class="dropdown-item" href="#">Лето</a>
-                        <a class="dropdown-item" href="#">Осень</a>
-                        <a class="dropdown-item" href="#">Зима</a>
+                        <a class="dropdown-item" href="catalog/1">Вечірнє вбрання</a>
+                        <a class="dropdown-item" href="catalog/2">Карнавальні костюми</a>
+                        <a class="dropdown-item" href="catalog/3">Спецодяг</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Индивидуальный заказ</a>
+                        <a class="dropdown-item" href="#">Індивідуальні моделі</a>
                     </div>
                 </li>
                 <li class="nav-item">

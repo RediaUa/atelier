@@ -12,5 +12,6 @@ return array(
     'admin' => 'admin/index',
     'order_service' => 'service/orderService',
     'services' => 'service/service',
+    'catalog/([0-9]+)' => 'site/catalog/$1',
     '' => 'site/index',
 );
