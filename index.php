@@ -16,7 +16,7 @@ require_once ROOT.'/components/Router.php';
 //3. Connect DB
 require_once 'components/Db.php';
 require_once 'models/BasicModel.php';
-
+//
 //4. Call the router
 $router = new Router();
 $router->run();

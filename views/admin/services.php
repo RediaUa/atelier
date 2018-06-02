@@ -49,8 +49,8 @@
             color: black;
             cursor: pointer;
             font-size: 17pt; 
-            width: 180px;
-            height: 45px;
+            width: 240px;
+            height: 50px;
             background-color: white;
             border: 1px solid black;
             border-radius: 5px;
@@ -179,7 +179,7 @@
     <?endforeach;?>
 </table>
 <div class="main-flex-field">
-    <a class="link-service" href="/">На головну</a>
+    <a class="link-service" href="admin">До головного меню</a>
 </div>
 </body>
 

@@ -82,7 +82,7 @@
                         <a class="dropdown-item" href="catalog/2">Карнавальні костюми</a>
                         <a class="dropdown-item" href="catalog/3">Спецодяг</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Індивідуальні моделі</a>
+                        <a class="dropdown-item" href="catalog/4">Індивідуальні моделі</a>
                     </div>
                 </li>
                 <li class="nav-item">

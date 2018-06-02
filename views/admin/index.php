@@ -56,7 +56,7 @@
 </head>
 <body>
 <div class="main-flex-field">
-	<a class="link-service" href="">Управління товарами</a>
+	<a class="link-service" href="/admin/catalog">Управління товарами</a>
 	<a class="link-service" href="/admin/services">Замовлення</a>
 	<a class="link-service" href="/">На головну</a>
 </div>

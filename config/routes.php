@@ -7,6 +7,10 @@
  */
 
 return array(
+    'admin/add/([0-9])' => 'admin/addModel/$1',
+    'admin/catalog/([0-9])/([0-9]+)' => 'admin/catalog/$1/$2',
+    'admin/catalog/([0-9])' => 'admin/catalog/$1',
+    'admin/catalog' => 'admin/catalog',
     'admin/order/([0-9]+)' => 'admin/applyOrder/$1',
     'admin/services' =>'admin/orderService',
     'admin' => 'admin/index',

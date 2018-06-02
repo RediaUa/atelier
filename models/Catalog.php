@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: temka
- * Date: 02.06.18
- * Time: 13:32
- */
+
 
 class Catalog extends BasicModel
 {
@@ -17,6 +12,16 @@ class Catalog extends BasicModel
     public function getCategoryById($id){
         $sql = "SELECT * FROM Category WHERE id = $id";
         return $this->dbo->query($sql)->fetchObject();
+    }
+    public function getModels($id_category){
+        $sql = "SELECT t.id, t.title, t.img, t.description FROM 
+        $this->tableName t JOIN Category c ON t.id_category = c.id";
+        if($id_category != null){
+            $sql = $sql . " WHERE c.id = $id_category";
+        }
+        $sql = $sql . " ORDER BY c.id";
+
+        return $this->dbo->query($sql)->fetchAll(PDO::FETCH_CLASS);
     }
 
 

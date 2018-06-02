@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: temka
- * Date: 28.05.18
- * Time: 11:19
- */
+require_once ROOT.'/models/File.php';
 require_once ROOT.'/models/Order_Service.php';
+require_once ROOT.'/models/Model.php';
+require_once ROOT.'/models/Catalog.php';
 class AdminController
 {
     public function actionIndex(){
@@ -47,6 +44,52 @@ class AdminController
         $order = $order_service->getOrder($id);
         require_once ROOT.'/views/admin/order.php';
         return true;
+}
+public function actionCatalog($category = null, $id = null){
+        if($id != null){
+            $model = new Model();
+            $resultOfDelete = $model->delete($id);
+            if($resultOfDelete){
+                header("Location: /admin/catalog/$category");
+            }
+            else{
+                echo "Помилка видалення!";
+            }
+
+        }
+    $catalog = new Catalog();
+    $models = $catalog->getModels($category);
+    require_once ROOT.'/views/admin/catalog.php';
+    return true;
+}
+
+public function actionAddModel($id_category){
+        $id_category = (int)$id_category;
+        if(isset($_POST['submit'])){
+            $title = $_POST['title'];
+            $desc = $_POST['desc'];
+            $img = $_FILES['image'];
+
+            if(!empty($title) && !empty($desc) && !empty($img)){
+                $file = new File($img);
+                if($file->upload()){
+                    $model = new Model($title, $desc, $file->getPath(), $id_category);
+                    $result = $model->save();
+                }
+                else{
+                    $errors[] = 'Зображення не загружене! Спробуйте ще раз';
+                }
+            }
+            else{
+                $errors[] = 'Заповніть всі поля';
+            }
+
+        }
+
+        require_once ROOT.'/views/admin/addModel.php';
+        return true;
+
+
 }
 
 }
