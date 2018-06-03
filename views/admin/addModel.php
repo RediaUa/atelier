@@ -133,12 +133,12 @@
     <div class="main-flex-field">
         <div class="item-order">Зображення <input type="file"  name="image" class="file-order"></div>
         <div class="item-order">Назва <input type="text" name="title" class="input-order"></div>
-        <div class="item-order">Опис замовлення: <textarea class="textarea-order" name="desc"></textarea></div>
+        <div class="item-order">Опис моделі: <textarea class="textarea-order" name="desc"></textarea></div>
     </div>
     <div class="main-flex-field-inverted-color">
         <button type="submit" name="submit" class="button-order">Додати</button>
         <?else: ?>
-        <div class="main-flex-field"><div class="result-access">Товар додано!</div></div> 
+        <div class="main-flex-field"><div class="result-access">Модель додано!</div></div>
         <?endif;?>
         <div class="main-flex-field-inverted-color"><a class="link-service link-back" href="/admin/catalog">Назад</a></div> 
     </div>
