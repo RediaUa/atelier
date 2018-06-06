@@ -181,7 +181,7 @@
     endif;?>
 </table>
 <div class="main-flex-field">
-    <a class="link-service" href="admin">До головного меню</a>
+    <a class="link-service" href="/admin_menu">До головного меню</a>
 </div>
 </body>
 

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="/template/css/main.css">
+    <link rel="stylesheet" href="/template/css/header_auth.css">
+
     <title>Hello, guest!</title>
 
 </head>
@@ -21,7 +23,6 @@
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -29,9 +30,6 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="../../template/img/slider/forSlider2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="../../template/img/slider/forSlider3.jpg" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -45,7 +43,7 @@
     </div>
             <div class="div-description">
                 <div class="text-description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facere architecto omnis soluta eos fugiat cupiditate incidunt. Doloribus tempore commodi reiciendis et architecto dolore dignissimos excepturi ullam esse iure, officiis.</div>
-                <img src="template/img/description-index/slider-image-3.jpg" class="img-description">
+                <div><img src="template/img/description-index/slider-image-3.jpg" class="img-description"></div>
                 <div class="text-description-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, expedita. Labore ad, officiis non! Earum molestiae cum, nam amet a. Eaque consectetur, possimus nisi commodi assumenda placeat sed nostrum iure!</div>
             </div>
 

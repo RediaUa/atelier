@@ -9,6 +9,17 @@ class AdminController
         require_once ROOT.'/views/admin/index.php';
         return true;
     }
+    public function actionAuth(){
+        if(isset($_POST['submit'])){
+            if( isset($_POST['login']) && isset($_POST['key'])) {
+                if($_POST['login'] == 'admin' && $_POST['key'] == 'admin'){
+                    header('Location: /admin_menu');
+                }
+          }
+        }
+        require_once ROOT.'/views/admin/auth.php';
+        return true;
+    }
 
     public function actionOrderService(){
         $order_service = new Order_Service();

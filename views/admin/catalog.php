@@ -147,7 +147,7 @@
                 <a href="/admin/catalog/4">Індивідуальні моделі</a>
             </li>
             <li>
-                <a href="/admin">До головного меню</a>
+                <a href="/admin_menu">До головного меню</a>
             </li>
         </ul>
     </div>

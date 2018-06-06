@@ -35,8 +35,9 @@ body {
     transition: 0.3s;
     cursor: pointer;
     margin-bottom: 20px;
-    overflow: auto;
     margin-top: 20px;
+    overflow: hidden;
+
 }
 .item-title {
     text-align: center;
@@ -48,6 +49,11 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    transition: transform .5s;
+
+}
+.item-image:hover{
+    transform: scale(1.2);
 }
 .item-image img {
     position: relative;
@@ -55,6 +61,7 @@ body {
     max-width: 100%;
     border-radius: 15px;
 }
+
 .item-description {
     text-align: center;
     overflow: auto;
